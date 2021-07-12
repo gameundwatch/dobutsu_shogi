@@ -16,11 +16,15 @@ void Main()
 	// 背景を水色にする
 	Scene::SetBackground(ColorF(0.8, 0.9, 1.0));
 
-	// 大きさ 60 のフォントを用意
-	const Font font(60);
-
 	while (System::Update())
 	{
+
+		// GUI
+		sGUI.write3x4Board();
+		sGUI.Operation(board);
+		// sGUI.writeAnimals(board);
+
+		//wait
 
 		// [A] キーが押されたら
 		if (KeyA.down())
@@ -41,9 +45,6 @@ void Main()
 			board[2][1] = Animal('H', true);
 		}
 
-	// GUI
-	sGUI.write3x4Board();
-	sGUI.writeAnimals(board);
 	}
 
 }

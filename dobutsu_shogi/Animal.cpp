@@ -3,15 +3,21 @@
 Animal::Animal() {
 	name = '0';
 	isPlayer = false;
+	selected = false;
 }
 
 Animal::Animal(char _name, bool _player) {
 	name = _name;
 	isPlayer = _player;
+	selected = false;
 }
 
-void Animal::setPos(int x, int y) {
+void Animal::setPos(int _x, int _y) {
 
+}
+
+void Animal::setSelect(bool _b) {
+	selected = _b;
 }
 
 char Animal::GetName() {
@@ -20,4 +26,12 @@ char Animal::GetName() {
 
 bool Animal::GetPlayer() {
 	return isPlayer;
+}
+
+bool Animal::isSelected() {
+	return selected;
+}
+
+void Animal::Operation() {
+
 }
